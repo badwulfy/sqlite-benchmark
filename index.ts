@@ -62,7 +62,7 @@ const generateData = async (
 
       if (i % 100 === 0) {
         console.log(
-          `Inserted ${i} meter, measure ${(i + 1) * nbMeasuresPerMeter}`
+          `Inserted ${i} meters, count measure ${(i + 1) * nbMeasuresPerMeter}`
         );
       }
     }
@@ -92,6 +92,7 @@ const generateStats = (meterIDs: string[]) => {
       "type",
       "unit"
     )
+    .countDistinct("meterID as nbMeter")
     .whereIn("meterID", meterIDs)
     .groupBy("date", "spotID", "type")
     .orderBy([
@@ -123,6 +124,9 @@ const getRandomMeters = async (nb: number) => {
 
 const main = async () => {
   try {
+    // apply last migration
+    await knex.migrate.latest();
+
     // console.time("generateData");
     // await generateData(5000, 2000, 3);
     // console.timeEnd("generateData");
