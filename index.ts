@@ -127,9 +127,9 @@ const main = async () => {
     // apply last migration
     await knex.migrate.latest();
 
-    // console.time("generateData");
-    // await generateData(5000, 2000, 3);
-    // console.timeEnd("generateData");
+    console.time("generateData");
+    await generateData(5000, 2000, 3);
+    console.timeEnd("generateData");
 
     console.time("getMeterMostUsed");
     await getMeterMostUsed();
