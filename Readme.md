@@ -8,6 +8,8 @@ Simulate :
 
 The script will generate dataset, select 1000 spots and compute all the stats for each spot per day
 
+[![asciicast](https://asciinema.org/a/YSiyVpTQMz73cJ6wkANaZrJnI.svg)](https://asciinema.org/a/YSiyVpTQMz73cJ6wkANaZrJnI)
+
 # Usage
 
 ```bash
