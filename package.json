@@ -12,7 +12,7 @@
   "dependencies": {
     "better-sqlite3": "^7.6.2",
     "bezier-easing": "^2.1.0",
-    "knex": "^2.3.0",
+    "knex": "^2.4.0",
     "pg": "^8.8.0",
     "sqlite3": "^5.1.2",
     "ts-node": "^10.9.1",
